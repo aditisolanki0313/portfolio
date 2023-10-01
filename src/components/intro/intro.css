@@ -1,0 +1,93 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 85rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    top: -4rem;
+    right: 0;
+    object-fit: cover;
+    height: 45rem;
+    width: 27rem;
+}
+
+.introContent {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+    padding: 0px;
+}
+
+.introText {
+    font-size: 4rem;
+    padding: 0px;
+}
+
+.introname {
+    color: rgb(198, 198, 35);
+}
+
+.intropara {
+    font-size: 1.4rem;
+    font-weight: 250;
+    padding: 5px;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    height: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn:hover{
+    color: rgb(0, 0, 0);
+    
+    border: 2px solid rgb(127, 118, 118);
+}
+
+.btnImg {
+    object-fit: cover;
+    margin-left: -20px;
+    margin-right: 10px;
+    height: 2rem;
+
+}
+@media screen and (max-width:600px) {
+      .bg {
+        right: -20vw;
+      }
+      .introContent{
+        font-size:0.5rem;
+      }
+      .hello {
+        font-size: 4.5vw;
+      }
+}
+@media screen and (max-width:480px) {
+    .bg {
+      right: -10vw;
+    }
+}   
