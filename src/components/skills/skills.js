@@ -18,14 +18,14 @@ const skills = () => {
           </div>
         </div>
         <div className='skillBar'>
-          <img src={webdesignimg} alt='' className='skillbarimg1'/>
+          <img src={webdesignimg} alt='' className='skillbarimg2'/>
           <div className='skillbarText'>
             <h1>Website Design</h1>
             <p>In today's mobile-first world, I ensure that your website looks and functions perfectly on all devices. I prioritize responsive design to reach a wider audience.</p>
           </div>
         </div>
         <div className='skillBar'>
-          <img src={appdesignimg} alt='' className='skillbarimg2'/>
+          <img src={appdesignimg} alt='' className='skillbarimg3'/>
           <div className='skillbarText'>
             <h1>App Design</h1>
             <p>I excel in crafting intuitive and visually pleasing user interfaces (UI) for mobile apps, ensuring a seamless and enjoyable user experience (UX).</p>

@@ -47,6 +47,10 @@
     font-size: 1.3rem;
 
 }
+.custom-link{
+    color: rgb(255, 255, 255);
+    
+}
 .ecommerceText>h1{
     font-size: 2rem;
 padding: 1rem;
@@ -122,6 +126,9 @@ padding: 1rem;
 .weatheringText>h1{
     font-size: 2rem;
 padding: 1rem;
+}
+.netlify {
+    color: rgb(255, 255, 2);
 }
 @media screen and (max-width:720px) {
     .ecommerceText>p {

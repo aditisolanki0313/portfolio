@@ -17,6 +17,8 @@ const Contact = () => {
                 console.log(error.text);
             });
     };
+
+    console.log(form.current)
     return (
         <section className='contactPage'>
             {/* <div className='clients'>
@@ -25,15 +27,18 @@ const Contact = () => {
             <div id='contact'>
                 <h1 className='contactpageTitle'>Contact Me</h1>
                 <span className='contactDes'>Please fill out this form for further discussion on work.</span>
-                <form className='contactForm' ref={form} onSubmit={sendEmail}>
+                <form className='contactForm' ref={form} onSubmit={sendEmail} >
                     <input type='text' className='name' placeholder='Your Name' name='your_name'/>
                     <input type='email' className='email' placeholder='Your email' name='your_email'/>
                     <textarea className='msg' name='message' rows={5} placeholder='Your message'></textarea>
                     <button type='submit' value='send' className='submitbtn'>Submit</button>
                     <div className='links'>
                         <img src={facebookicon} alt='fb' className='link' />
-                        <img src={instaicon} alt='insta' className='link' />
-                        <img src={linkedinicon} alt='linkedin' className='link'/>
+                        <a href='https://instagram.com/_gup.chup.___?igshid=MzRlODBiNWFlZA=='>
+                        <img src={instaicon} alt='insta' className='link' /></a>
+                        <a href='https://www.linkedin.com/in/aditisolanki13/'> 
+                        <img src={linkedinicon} alt='linkedin' className='link'/></a>
+                       
 
 
                     </div>

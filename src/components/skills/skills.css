@@ -46,16 +46,16 @@
 }
 .skillbarimg2 {
     object-fit: cover;
-    height: 6rem;
-    width: 7rem;
-    margin: -13px 10px 0px -20px;
+    height: 5rem;
+    width: 5rem;
+    margin: -10px 23px 0px -7px;
     
 }
 .skillbarimg3 {
     object-fit: cover;
-    height: 6rem;
-    width: 6rem;
-    margin: -13px 20px 0px -14px;
+    height: 5rem;
+    width: 5.2rem;
+    margin: -3px 24px 0px -10px;
     
 }
 .skillbarText>p {
