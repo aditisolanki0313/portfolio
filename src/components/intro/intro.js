@@ -12,9 +12,9 @@ const Intro = () => {
                     <span className='hello'>Hello<span className="wave">👋</span></span>
                     <span className='introText'>I'm Aditi Solanki</span>
                     <div className="role-container">
-                        <span className="role">Website Designer</span>
+                        <span className="role">UI Designer</span>
                     </div>
-                    <p className='intropara'>I am a skilled web designer with experience in creating 
+                    <p className='intropara'>I am a skilled web and app designer with experience in creating 
                         UI/UX and user-friendly websites.
                     </p>
                     <div className="button-container">
