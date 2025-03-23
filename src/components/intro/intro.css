@@ -1,93 +1,478 @@
 #intro {
     height: calc(100vh - 4rem);
-    width: 100vw;
+    width: 100%;
     max-width: 85rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
 }
 
-.bg {
-    position: absolute;
-    z-index: -1;
-    top: -4rem;
-    right: 0;
-    object-fit: cover;
-    height: 45rem;
-    width: 27rem;
+.intro-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
 }
 
 .introContent {
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hello {
     font-size: 1.75rem;
-    font-weight: 100;
-    padding: 0px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: #959595;
+}
+
+.wave {
+    margin-left: 0.5rem;
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .introText {
     font-size: 4rem;
-    padding: 0px;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    line-height: 1.2;
+    color: #7d7d7d;
 }
 
 .introname {
     color: rgb(198, 198, 35);
+    position: relative;
+    display: inline-block;
+}
+
+.introname::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(198, 198, 35, 0.3);
+    z-index: -1;
+    transform: translateY(-5px);
+}
+
+.role-container {
+    margin: 0.5rem 0 1.5rem;
+}
+
+.role {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #aeaeae;
+    position: relative;
+    padding: 0.2rem 0;
+}
+
+.role::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #666;
+    border-radius: 2px;
 }
 
 .intropara {
     font-size: 1.4rem;
-    font-weight: 250;
-    padding: 5px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #d8d8d8;
+    margin: 1rem 0 2rem;
+    max-width: 90%;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: #bcbcbc;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(198, 198, 35, 0.4);
+    z-index: -1;
+    transform: translateY(-5px);
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .btn {
-    background-color: rgb(255, 255, 255);
-    margin: 1rem 0;
-    padding: 0.75rem 2rem;
+    padding: 0 2rem;
     border: none;
     border-radius: 2rem;
-    height: 2.5rem;
+    height: 3rem;
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
-.btn:hover{
-    color: rgb(0, 0, 0);
-    
-    border: 2px solid rgb(127, 118, 118);
+
+.primary-btn {
+    background-color: rgb(198, 198, 35);
+    color: #333;
+    box-shadow: 0 4px 15px rgba(198, 198, 35, 0.3);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(198, 198, 35, 0.4);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.secondary-btn:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-3px);
 }
 
 .btnImg {
-    object-fit: cover;
-    margin-left: -20px;
-    margin-right: 10px;
-    height: 2rem;
+    height: 1.5rem;
+    width: auto;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
 
+.primary-btn:hover .btnImg {
+    transform: scale(1.1);
 }
-@media screen and (max-width:600px) {
-      .bg {
-        right: -20vw;
-      }
-      .introContent{
-        font-size:0.5rem;
-      }
-      .hello {
-        font-size: 4.5vw;
-      }
+
+.profile-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: floatIn 1.2s ease-out;
 }
-@media screen and (max-width:480px) {
-    .bg {
-      right: -10vw;
+
+@keyframes floatIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
     }
-}   
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.profile-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid rgba(198, 198, 35, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 30px rgba(198, 198, 35, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 50px rgba(198, 198, 35, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 30px rgba(198, 198, 35, 0.2);
+    }
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.circle-decoration {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 30%, rgba(198, 198, 35, 0.1) 70%);
+    animation: rotate 30s linear infinite;
+}
+
+.circle2 {
+    width: 460px;
+    height: 460px;
+    border: 2px dashed rgba(198, 198, 35, 0.3);
+    animation: rotate 40s linear infinite reverse;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .intro-container {
+        padding: 0 3rem;
+    }
+
+    .introText {
+        font-size: 3.5rem;
+    }
+
+    .profile-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .circle1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .circle2 {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .intro-container {
+        padding: 0 2rem;
+    }
+
+    .introText {
+        font-size: 3rem;
+    }
+
+    .role {
+        font-size: 1.8rem;
+    }
+
+    .intropara {
+        font-size: 1.2rem;
+    }
+
+    .profile-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .circle1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle2 {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-container {
+        flex-direction: column-reverse;
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+
+    }
+
+    .introContent,
+    .profile-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .introContent {
+        align-items: center;
+    }
+
+    .role::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intropara {
+        max-width: 100%;
+    }
+
+    .profile-container {
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .profile-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle1 {
+        width: 240px;
+        height: 240px;
+    }
+
+    .circle2 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .introText {
+        font-size: 2.5rem;
+    }
+
+    .hello {
+        font-size: 1.4rem;
+    }
+
+    .role {
+        font-size: 1.5rem;
+    }
+
+    .intropara {
+        font-size: 1rem;
+    }
+
+    .profile-circle {
+        width: 180px;
+        height: 180px;
+        border-width: 6px;
+    }
+
+    .circle1 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .btn {
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        max-width: 220px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .introText {
+        font-size: 2rem;
+    }
+
+    .hello {
+        font-size: 1.2rem;
+    }
+
+    .profile-circle {
+        width: 160px;
+        height: 160px;
+        border-width: 5px;
+    }
+}
