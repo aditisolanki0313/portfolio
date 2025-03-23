@@ -163,13 +163,16 @@
         font-size: 2.5rem;
     }
 
+    .hacheriesText>p,
+    .kripteesText>p,
     .ecommerceText>p,
     .musicText>p,
     .websiteText>p,
     .weatheringText>p {
         font-size: 1.1rem;
     }
-
+    .hacheriesText>h1,
+    .kripteesText>h1,
     .ecommerceText>h1,
     .musicText>h1,
     .websiteText>h1,
@@ -189,6 +192,8 @@
     }
 
     /* Convert flex layouts to column for mobile */
+    .hatcheries,
+    .kriptees,
     .ecommerce,
     .musicUI,
     .website,
@@ -199,6 +204,8 @@
     }
 
     /* Make images full width on mobile */
+    .hatcheriesimg,
+    .kripteesimg,
     .ecommerceimg,
     .musicimg,
     .websiteimg,
@@ -207,7 +214,8 @@
         margin: 0 auto 1rem;
         height: auto;
     }
-
+    .hacheriesText>h1,
+    .kripteesText>h1,
     .ecommerceText>h1,
     .musicText>h1,
     .websiteText>h1,
@@ -215,7 +223,8 @@
         font-size: 1.5rem;
         padding: 0.5rem 0;
     }
-
+    .hacheriesText>p,
+    .kripteesText>p,
     .ecommerceText>p,
     .musicText>p,
     .websiteText>p,
@@ -238,14 +247,16 @@
     .workPara {
         font-size: 0.8rem;
     }
-
+    .hacheriesText>h1,
+    .kripteesText>h1,
     .ecommerceText>h1,
     .musicText>h1,
     .websiteText>h1,
     .weatheringText>h1 {
         font-size: 1.3rem;
     }
-
+    .hacheriesText>p,
+    .kripteesText>p,
     .ecommerceText>p,
     .musicText>p,
     .websiteText>p,
