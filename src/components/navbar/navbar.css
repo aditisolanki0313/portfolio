@@ -1,10 +1,10 @@
-.navbar{
+.navbar {
     background: rgb(41, 40, 40);
-    height: 5rem;
-    width: 100vw;
+    height: auto;
+    min-height: 5rem;
+    width: 100%;
     max-width: 100rem;
-    /* margin: 0px; */
-    padding: 3rem 3rem;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,102 +12,184 @@
     z-index: 3;
     top: 0;
     font-size: larger;
+    box-sizing: border-box;
 }
-.logo{
-    object-fit: cover;
-    height: 8rem;
-    width: 10rem;
-    margin-top: -3px;
-    margin-left: -35px;
 
+.logo {
+    object-fit: contain;
+    height: 5rem;
+    width: auto;
+    max-width: 10rem;
+    margin: 0.5rem 0;
 }
+
+.desktopMenu {
+    display: flex;
+    align-items: center;
+}
+
 .desktopMenuListItem {
-    margin: 1rem;
+    margin: 0 1rem;
     cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid transparent;
 }
+
 .desktopMenuListItem:hover {
     color: red;
-    padding-bottom: 0.5rem;
     border-bottom: 3px solid red;
 }
+
 .desktopMenubtn {
-   background: #ff0d0d;
+    background: #ff0d0d;
     color: rgb(255, 255, 255);
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem 0 0;
+    padding: 0.5rem 1rem;
     border-radius: 2rem;
-    font-size: 17px;
-    cursor:grab;
-
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 .desktopMenubtn:hover {
     color: white;
-    padding-bottom: 0rem;
     border: 0.5px solid rgb(173, 102, 102);
-    
+    transform: scale(1.05);
 }
 
 .desktopMenuImg {
-    object-fit: cover;
+    object-fit: contain;
     height: 1rem;
     width: 1rem;
-    margin: 1rem;
+    margin-right: 0.5rem;
 }
-   .active{
+
+.active {
     color: red;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid red;
-   }
-.mobMenu{
-    display: none;
-    /* object-fit: cover; */
-    width: 4rem;
-    height: 2rem;
-    
 }
-.mobMenu:hover{
+
+.mobMenu {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
-.navMenu{
+.navMenu {
     position: absolute;
-    top: 4rem;
+    top: 5rem;
     right: 2rem;
     z-index: 2;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    margin: 1rem;
+    margin: 0;
     height: fit-content;
-    width: 20rem;
-    max-width: 25rem;
+    width: auto;
+    min-width: 12rem;
+    max-width: 90%;
     background: rgb(24, 24, 24);
     border-radius: 0.5rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.listItem{
+.listItem {
     color: white;
-    padding: 0.7rem 3rem;
+    padding: 0.7rem 2rem;
     margin: 0.5rem;
     background: rgb(30, 30, 30);
+    border-radius: 0.3rem;
+    transition: background 0.3s;
 }
-.listItem:hover{
-    cursor: pointer;
-    border: 0.1rem solid rgb(34, 34, 34);
 
+.listItem:hover {
+    cursor: pointer;
+    background: rgb(50, 50, 50);
 }
-@media screen and (max-width:720px) {
-    .mobMenu{
+
+/* Tablet Styles */
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0 1.5rem;
+    }
+    
+    .logo {
+        height: 4.5rem;
+    }
+    
+    .desktopMenuListItem {
+        margin: 0 0.7rem;
+        font-size: 0.9rem;
+    }
+    
+    .desktopMenubtn {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+        min-height: 4rem;
+    }
+    
+    .logo {
+        height: 3.5rem;
+    }
+    
+    .mobMenu {
         display: flex;
     }
+    
     .desktopMenu {
         display: none;
     }
-    .desktopMenubtn{
+    
+    .desktopMenubtn {
         display: none;
+    }
+    
+    .navMenu {
+        top: 4rem;
+        right: 1rem;
+        width: auto;
+        min-width: 10rem;
+        max-width: 80%;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0 0.8rem;
+        min-height: 3.5rem;
+    }
+    
+    .logo {
+        height: 3rem;
+        margin-left: 0;
+    }
+    
+    .navMenu {
+        right: 0.5rem;
+        left: 0.5rem;
+        max-width: calc(100% - 1rem);
+        margin: 0;
+    }
+    
+    .listItem {
+        padding: 0.6rem 1rem;
+        margin: 0.3rem;
+        font-size: 0.9rem;
     }
 }
