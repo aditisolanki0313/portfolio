@@ -1,6 +1,8 @@
 import React from 'react'
 import './works.css';
 // import { Link } from 'react-router-dom';
+import kriptees from '../../assets/kriptees.png';
+import hacheries from '../../assets/shiv shakti hacheries.png';
 import weathering from '../../assets/weathering.png';
 import website from '../../assets/website.png';
 import musicUI from '../../assets/musicUI.png';
@@ -13,6 +15,22 @@ const Works = () => {
       <span className='workPara'>My website design expertise combines captivating aesthetics with seamless functionality, delivering visually engaging and user-friendly interfaces. Proficient in responsive design, I ensure adaptability across devices. Data-driven decisions and user research enhance both aesthetics and performance for effective digital solutions.</span>
       <div className='workBars'>
       {/* <Link to ="/https://achats.netlify.app//"> */}
+        <div className='hatcheries'>
+          <img src={hacheries} alt='' className='hacheriesimg' />
+          <div className='hacheriesText'>
+            <h1>Shiv Shakti Hatcheries</h1>
+            <p>Designed a modern and interactive website for <a href='https://ubiquitous-monstera-f06bea.netlify.app/' className='netlify'>Shiv Shakti Hatcheries</a> using Figma, incorporating smooth animations to enhance user engagement. <br /> Focused on a clean, professional layout with a blend of informative content, intuitive navigation, and visually appealing elements. Ensured a seamless user experience by integrating responsive design principles and dynamic UI components for a polished digital presence.
+            </p>
+          </div>
+        </div>
+        <div className='kriptees'>
+          <img src={kriptees} alt='' className='kripteesimg' />
+          <div className='kripteesText'>
+            <h1>Kriptees</h1>
+            <p>Designed an intuitive and visually compelling T-shirt e-commerce platform <a href='https://www.figma.com/proto/mC2TPOwG5CGIcnIgBs865Y/kriptees?node-id=15-2&p=f&t=7gGn32m8CBhQTQHj-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=188%3A2' className='netlify'>Kriptees</a> that enhances user engagement and shopping experience. <br/> Focused on seamless navigation, modern aesthetics, and responsive design, ensuring accessibility across all devices. Implemented filtering options, detailed product pages, and an interactive cart system to optimize user flow.
+            </p>
+          </div>
+        </div>
         <div className='ecommerce'>
           <img src={ecommerce} alt='' className='ecommerceimg' />
           <div className='ecommerceText'>
